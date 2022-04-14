@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>#creative</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,500;1,200&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Holtwood+One+SC&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <div id="index">
+        <ul>
+            <span id="spwnTitle">Locais:</span>
+
+            <li class="spawn" tabindex="-1" style="background: url(' https://media.discordapp.net/attachments/703256006347456522/959515204922798100/davis.PNG ')" data-spawn="davis"><span>Avenida Davis </span></li>
+            <li class="spawn" tabindex="-1" style="background: url( ' https://media.discordapp.net/attachments/703256006347456522/959516993004912770/Chaves.PNG ')" data-spawn="hawick"><span>Vila do Chaves </span></li>
+            <li class="spawn" tabindex="-1" style="background: url( ' https://media.discordapp.net/attachments/703256006347456522/959515205199601704/lago.PNG?width=1440&height=618 ')" data-spawn="west"><span>Garagem do Lago </span></li>
+            <li class="spawn" tabindex="-1" style="background: url( ' https://media.discordapp.net/attachments/703256006347456522/959515205908455504/onibus.PNG ')" data-spawn="little"><span>Rodoviaria </span></li>
+            <li class="spawn" tabindex="-1" style="background: url(' https://media.discordapp.net/attachments/703256006347456522/959515206919290930/praca1.PNG ')" data-spawn="vespucci"><span>Garagem Pracinha </span></li>
+            <li class="spawn" tabindex="-1" style="background: url( ' https://media.discordapp.net/attachments/703256006347456522/959515204587237486/academia.PNG ')" data-spawn="goma"><span>Academia Praia </span></li>
+            <li class="spawn" tabindex="-1" style="background: url( ' https://media.discordapp.net/attachments/703256006347456522/959515207401603102/praia.PNG?width=1440&height=473 ')" data-spawn="delperro"><span>Garagem Praia </span></li>
+            <li class="spawn" tabindex="-1" style="background: url( ' https://media.discordapp.net/attachments/703256006347456522/959515205572902912/norte.PNG ')" data-spawn="route68"><span>Garagem Sandy Shores </span></li>
+            <li class="spawn" tabindex="-1" style="background: url(' https://media.discordapp.net/attachments/703256006347456522/959515206420164678/paleto.PNG ')" data-spawn="procopio"><span>Garagem Palleto </span></li>
+        </ul>
+        <li class="spawnNow" data-spawn="spawn"><span>Spawnar Agora</span></li>
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js " integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin=" anonymous"></script>
+
+    <script>
+        $(() => {
+            window.addEventListener('message', (event) => {
+                if (event.data.display) {
+                    $('#index').show();
+                } else {
+                    $('#index').hide();
+                }
+            })
+
+            $('li').click(function() {
+                console.log($(this).data('spawn'))
+                $.post('http://vrp_login/spawn', JSON.stringify({
+                    choice: $(this).data('spawn')
+                }));
+            });
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,113 @@
+@font-face {
+    font-family: 'Chango';
+    src: url("WorkSans-VariableFont_wght.ttf");
+}
+
+#index {
+    margin: 30px;
+    display: none;
+    position: absolute;
+}
+
+#spwnTitle {
+    color: rgb(0, 0, 0);
+    background: rgba(206, 206, 206, 0.596);
+    font-weight: bolder;
+    padding: 0px 10px;
+    border-radius: 10% 2% 10% 2% / 90% 50% !important;
+    border-radius: 20%;
+    font-size: larger;
+    font-family: 'Holtwood One SC', serif;
+    text-shadow: 3px 3px purple;
+}
+
+.spawnNow {
+    position: fixed;
+    bottom: 5vh;
+    left: 40vw;
+    font-family: 'Holtwood One SC', serif;
+    box-shadow: 25px 25px 30px 0px rgba(17, 24, 32, 0.7), inset -8px -8px 16px 0px rgba(18, 24, 32, 0.8), inset 0px 11px 28px 0px rgb(0, 0, 0);
+    color: azure;
+    padding: 10px;
+    font-size: larger;
+    text-shadow: 2px 2px rgb(0, 0, 58);
+    width: 400px;
+    font-weight: 900;
+    height: 40px;
+    list-style: none;
+    user-select: none;
+    text-align: center;
+    margin-bottom: 10px;
+    border-radius: 5% 1% 5% 1% / 90% 50% !important;
+    border: ridge 1px white;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.spawnNow:hover {
+    transition: none;
+    filter: drop-shadow(2px 2px 5px rgba(25, 0, 255, 0.664));
+}
+
+.spawnNow:hover span {
+    color: blueviolet;
+    text-shadow: 1px 1px 1px purple;
+}
+
+.spawn {
+    margin-top: 10px;
+    box-shadow: 17px 17px 34px 0px rgba(17, 24, 32, 0.7), inset -4px -4px 8px 0px rgba(18, 24, 32, 0.8), inset 0px 11px 28px 0px rgb(0, 0, 0);
+    height: 40px;
+    width: 400px;
+    padding: 10px;
+    list-style: none;
+    user-select: none;
+    margin-bottom: 10px;
+    background-size: contain;
+    background-position: 50% 50% !important;
+    background-repeat: no-repeat;
+    transition: width 0.5s;
+    border-radius: 5% 1% 5% 1% / 90% 50% !important;
+    border-collapse: collapse;
+    transition: 3s;
+    /* text-align: center; */
+}
+
+.spawn span {
+    border-radius: 5% 5% /25%;
+    padding: 0.1vh 1vh;
+    font-family: 'Holtwood One SC', serif;
+    text-shadow: 2px 2px 3px black;
+    color: azure;
+    font-weight: 100;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.76);
+}
+
+.spawn:hover {
+    width: 420px;
+    height: 250px;
+    border-radius: 15% 1% / 25% 50% !important;
+    filter: drop-shadow(1px 1px 0.6px rgb(143, 7, 255))!important;
+    transition: all 3s;
+}
+
+.spawn:hover span {
+    background: rgba(255, 253, 253, 0.562);
+    color: blueviolet;
+    text-shadow: 1px 1px 1px purple;
+    margin-left: 20px;
+}
+
+.spawn:focus {
+    filter: drop-shadow(1px 1px 0.6px rgb(143, 7, 255))!important;
+    max-width: 402px!important;
+    height: 40px!important;
+    border-radius: 5% 1% 5% 1% / 90% 50% !important;
+    outline: none;
+}
+
+.spawn:focus span {
+    background: rgba(255, 253, 253, 0.562)!important;
+    color: blueviolet;
+    text-shadow: 1px 1px 1px purple;
+}
